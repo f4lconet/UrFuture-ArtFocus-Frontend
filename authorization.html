@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="./pages/authorization.css">
+</head>
+<body class="page">
+    <header class="header"></header>
+    
+    <main class="content">
+        <section class="choose-job">
+            <div class="logo">
+                <img src="./images/authorization/logo.svg" class="logo__image">
+                <p class="logo__text">UrFuture</p>
+            </div>
+
+            <div class="choose-job__container">
+                <h1 class="choose-job__title">Выбери себе профессию</h1>
+                <div class="choose-job__subtitle-container">
+                    <p class="choose-job__subtitle">Следуй этим простым шагам</p>
+                </div>
+                <ul class="choose-job__steps">
+                    <li class="choose-job__step">
+                        <div class="choose-job__card choose-job__card_theme_white">
+                            <div class="choose-job__number-container choose-job__number-container_theme_white">
+                                <p class="choose-job__number">1</p>
+                            </div>
+                            <div class="choose-job__text-container">
+                                <p class="choose-job__text choose-job__text_theme_white">Зарегистрируйте аккаунт</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="choose-job__step">
+                        <div class="choose-job__card">
+                            <div class="choose-job__number-container">
+                                <p class="choose-job__number">2</p>
+                            </div>
+                            <div class="choose-job__text-container">
+                                <p class="choose-job__text">Пройди тестирование</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="choose-job__step">
+                        <div class="choose-job__card">
+                            <div class="choose-job__number-container">
+                                <p class="choose-job__number">3</p>    
+                            </div>
+                            <div class="choose-job__text-container">
+                                <p class="choose-job__text">Подбери индивидуальную учебную траекторию</p>
+                            </div>   
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="authorization">
+            <form action="" method="" class="form">
+                <h2 class="form__title">Авторизация</h2>
+                <fieldset class="form__input-container">
+                    <label for="mail">Email</label>
+                    <input type="email" class="form__item form__item_el_email" name="mail" id="mail" required placeholder="Введите email или номер телефона">
+                    
+                    <label for="password">Пароль</label>
+                    <input type="password" class="form__item form__item_el_password" name="password" id="password" required placeholder="Введите пароль">
+                </fieldset>
+
+                <fieldset class="form__handlers">
+                    <button type="submit" class="form__submit-button">Войти</button>
+                </fieldset>
+                <a href="#" class="form__link">У вас нет учётной записи? Зарегистрироваться</a>
+                </ul>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+
+    </footer>
+</body>
+</html>
