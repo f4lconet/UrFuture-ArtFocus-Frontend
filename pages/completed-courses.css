@@ -112,6 +112,10 @@
     z-index: 5;
 }
 
+.course__link {
+    text-decoration: none;
+}
+
 .course__card-title {
     margin: 0 0 11px;
     max-width: 209px;

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет - моё направление</title>
-    <link rel="stylesheet" href="./pages/completed-courses.css">
+    <title>Карточка курса</title>
+    <link rel="stylesheet" href="./pages/lk-course-unfinished.css">
 </head>
 <body class="pages">
     <aside class="sidebar">
@@ -41,7 +41,7 @@
                     </defs>
                     </svg>
                     </a></li>
-                <li class="sidebar__list-item"><a href="" class="sidebar__list-link"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <li class="sidebar__list-item"><a href="./completed-courses.html" class="sidebar__list-link"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1320_25976)">
                     <path d="M30.0001 28.75C30.0001 29.0815 29.8684 29.3994 29.6339 29.6338C29.3995 29.8683 29.0816 30 28.7501 30H1.25006C0.918541 30 0.600598 29.8683 0.366178 29.6338C0.131757 29.3994 6.12973e-05 29.0815 6.12973e-05 28.75C6.12973e-05 28.4184 0.131757 28.1005 0.366178 27.8661C0.600598 27.6316 0.918541 27.5 1.25006 27.5H28.7501C29.0816 27.5 29.3995 27.6316 29.6339 27.8661C29.8684 28.1005 30.0001 28.4184 30.0001 28.75ZM0.363811 10.6899C0.0944642 10.1904 -0.0303204 9.62558 0.00346183 9.05901C0.0372441 8.49244 0.228256 7.9465 0.555061 7.48245C1.08913 6.69884 1.80437 6.05565 2.64006 5.60745L12.0163 0.727447C12.9379 0.248236 13.9613 -0.00195313 15.0001 -0.00195312C16.0388 -0.00195313 17.0622 0.248236 17.9838 0.727447L27.3588 5.6112C28.1945 6.0594 28.9097 6.70259 29.4438 7.4862C29.7706 7.95025 29.9616 8.49619 29.9954 9.06276C30.0292 9.62933 29.9044 10.1941 29.6351 10.6937C29.3451 11.2422 28.9102 11.7007 28.3777 12.0192C27.8452 12.3377 27.2355 12.504 26.6151 12.4999H26.2501V22.4999H27.5001C27.8316 22.4999 28.1495 22.6316 28.3839 22.8661C28.6184 23.1005 28.7501 23.4184 28.7501 23.7499C28.7501 24.0815 28.6184 24.3994 28.3839 24.6338C28.1495 24.8683 27.8316 25 27.5001 25H2.50006C2.16854 25 1.8506 24.8683 1.61618 24.6338C1.38176 24.3994 1.25006 24.0815 1.25006 23.7499C1.25006 23.4184 1.38176 23.1005 1.61618 22.8661C1.8506 22.6316 2.16854 22.4999 2.50006 22.4999H3.75006V12.4999H3.38506C2.76401 12.5038 2.15382 12.3371 1.62105 12.0179C1.08828 11.6987 0.653385 11.2394 0.363811 10.6899ZM6.25006 22.4999H10.0001V12.4999H6.25006V22.4999ZM12.5001 12.4999V22.4999H17.5001V12.4999H12.5001ZM23.7501 12.4999H20.0001V22.4999H23.7501V12.4999ZM2.57881 9.5312C2.65724 9.6758 2.77395 9.79602 2.91616 9.8787C3.05837 9.96138 3.2206 10.0033 3.38506 9.99995H26.6151C26.7795 10.0033 26.9417 9.96138 27.084 9.8787C27.2262 9.79602 27.3429 9.6758 27.4213 9.5312C27.4784 9.43565 27.5061 9.32536 27.5007 9.21417C27.4954 9.10297 27.4573 8.99583 27.3913 8.9062C27.0884 8.45609 26.6815 8.08562 26.2051 7.8262L16.8301 2.94245C16.2651 2.64923 15.6379 2.49616 15.0013 2.49616C14.3648 2.49616 13.7376 2.64923 13.1726 2.94245L3.79756 7.8262C3.32129 8.08646 2.91447 8.45727 2.61131 8.90745C2.54517 8.99671 2.50681 9.10348 2.50103 9.21442C2.49525 9.32537 2.52231 9.43555 2.57881 9.5312Z" fill="#F3F3F3"/>
                     </g>
@@ -116,77 +116,82 @@
             </a></div>
         </nav>
     </aside>
-
     <main class="content">
-        <section class="content__container">
-            <h1 class="content__title">Пройденные курсы</h1>
-            <div class="content__semesters">
-                <p class="content__semesters-text">Все семестры</p>
-                <button type="button" class="content__semesters-button">
-                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.99997 7.50003C6.73736 7.50049 6.47725 7.44904 6.23459 7.34865C5.99192 7.24825 5.7715 7.10089 5.58597 6.91503L0.292969 1.62103L1.70697 0.207031L6.99997 5.50003L12.293 0.207031L13.707 1.62103L8.41397 6.91403C8.22852 7.10007 8.00813 7.24762 7.76547 7.34819C7.5228 7.44875 7.26265 7.50036 6.99997 7.50003Z" fill="black"/>
-                    </svg>
-                </button>
+        <div class="content__container">
+            <div class="main-description">
+                <h1 class="main-description__title">МУП ДМиМЛ_09 Дискретная математика и математическая логика</h1>
+                <section class="annotation">
+                    <h2 class="annotation__title title">Аннотация</h2>
+                    <p class="annotation__text">
+                        Дискретная математика - одна из важнейших составляющих современной математики. С одной стороны, она включает фундаментальные основы математики - теорию множеств, математическую логику, теорию алгоритмов; с другой стороны, является основным математическим аппаратом информатики и вычислительной техники и потому служит базой для многочисленных приложений в экономике, технике, социальной сфере.
+                    </p>
+                </section>
+
+                <section class="education">
+                    <h2 class="education__title title">Образовательный результат</h2>
+                    <p class="education__text">
+                        ОПК-2 - Способен формализовывать и решать задачи, относящиеся к профессиональной деятельности, используя методы моделирования и математического анализа<br>
+                        З-1 - Привести примеры использования методов моделирования и математического анализа в решении задач, относящихся к профессиональной деятельности<br>
+                        У-1 - Обоснованно выбрать возможные методы моделирования и математического анализа для предложенных задач профессиональной деятельности<br>
+                        П-1 - Решать поставленные задачи, относящиеся к области профессиональной деятельности, используя освоенные за время обучения пакеты прикладных программ для моделирования и математического анализа<br>
+                        Д-1 - Способность к самообразованию, к самостоятельному освоению новых методов математического анализа и моделирования
+                    </p>
+                </section>
+
+                <section class="assessment">
+                    <ul class="assessment__list">
+                        <li class="assessment__list-item">
+                            <p class="assessment__text">
+                                <span class="span-accent">Бальная</span> шкала оценивания
+                            </p>
+                        </li>
+                        <li class="assessment__list-item">
+                            <p class="assessment__text">
+                                Максимальное количество баллов - <span class="span-accent">100</span>
+                            </p>
+                        </li>
+                        <li class="assessment__list-item">
+                            <p class="assessment__text">
+                                Количество предметов контроля - <span class="span-accent">33</span>
+                            </p>
+                        </li>
+                        <li class="assessment__list-item">
+                            <p class="assessment__text">
+                                Итоговый проект - <span class="span-accent">эссе</span>
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+
+                <a href="completed-courses.html" class="back">Назад</a>
             </div>
-
-            <ul class="courses__cards">
-                <a class="course__link" href="lk-course-unfinished.html">
-                    <li class="course__card">
-                        <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                        <p class="course__card-text">Смешанный курс</p>
-                        <p class="course__card-text">УРФУ</p>
+            
+            <section class="additional-description">
+                <ul class="additional-description__list">
+                    <li class="additional-description__list-item">
+                        <h2 class="additional-description__title title">Код:</h2>
+                        <p class="additional-description__text">ДМиМЛ_09</p>
                     </li>
-                </a>
-                
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-            </ul>           
-        </section>
+                    <li class="additional-description__list-item">
+                        <h2 class="additional-description__title title">Ак. часы:</h2>
+                        <p class="additional-description__text">66</p>
+                    </li>
+                    <li class="additional-description__list-item">
+                        <h2 class="additional-description__title title">Авторы:</h2>
+                        <ul class="authors">
+                            <li class="additional-description__text authors-item">Расин Олег Вениаминович</li>
+                            <li class="additional-description__text authors-item">Ермакова Галина Михайловна</li>
+                            <li class="additional-description__text authors-item">Белоусова Вероника Игоревна</li>
+                            <li class="additional-description__text authors-item">Белоусов Иван Николаевич</li>
+                        </ul>
+                    </li>
+                    <li class="additional-description__list-item">
+                        <h2 class="additional-description__title title">Макс. кол-во обучающихся:</h2>
+                        <p class="additional-description__text">140</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </main>
 </body>
 </html>

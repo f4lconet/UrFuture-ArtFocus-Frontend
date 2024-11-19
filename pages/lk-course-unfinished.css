@@ -1,0 +1,165 @@
+@import url('../vendor/normalize.css');
+
+@import url('../vendor/fonts.css');
+
+@import url('../blocks/sidebar/sidebar.css');
+@import url('../blocks/sidebar/__nav/sidebar__nav.css');
+@import url('../blocks/sidebar/__list/sidebar__list.css');
+@import url('../blocks/sidebar/__list-item/sidebar__list-item.css');
+@import url('../blocks/sidebar/__list-link/sidebar__list-link.css');
+@import url('../blocks/sidebar/__user/sidebar__user.css');
+@import url('../blocks/sidebar/__user-link/sidebar__user-link.css');
+
+.pages {
+    max-width: 1920px;
+    height: 100vh;
+    margin: auto;
+    font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 1);
+    display: flex;
+}
+
+.title {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    color: rgba(8, 87, 205, 1);
+}
+
+.content {
+    width: 100%;
+    margin-left: 70px;
+}
+
+.content__container {
+    display: flex;
+}
+
+.main-description {
+    width: 1140px;
+    padding: 60px 160px 18px 70px;
+}
+
+.main-description__title {
+    margin: 0 0 70px;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 39px;
+    color: rgba(8, 87, 205, 1);
+}
+
+.annotation {
+    margin-bottom: 50px;
+}
+
+.annotation__text {
+    margin: 0;
+}
+
+.education {
+    margin-bottom: 43px;
+}
+
+.education__text {
+    margin: 0;
+}
+
+.assessment {
+    margin-bottom: 130px;
+}
+
+.assessment__list {
+    color: rgba(255, 255, 255, 1);
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.assessment__list-item {
+    min-width: 227px;
+    min-height: 140px;
+    margin-right: 77px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.assessment__list-item:last-of-type {
+    margin: 0;
+}
+
+.assessment__list-item {
+    background: url('data:image/svg+xml,<svg width="227" height="140" viewBox="0 0 227 140" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12C0 5.37258 5.37258 0 12 0H75.7239C76.5722 0 77.4219 0.086724 78.248 0.279558C88.1796 2.59773 92.6243 5.99712 97.2906 13.7954C97.7696 14.5959 98.3189 15.3614 98.9714 16.028C106.649 23.8724 114.076 26.663 135 26.0394H215C221.627 26.0394 227 31.412 227 38.0394V128C227 134.627 221.627 140 215 140H12C5.37258 140 0 134.627 0 128V12Z" fill="%23243665"/></svg>') no-repeat;
+    background-size: cover;
+}
+
+.assessment__list-item:nth-of-type(2n) {
+    background: url('data:image/svg+xml,<svg width="227" height="140" viewBox="0 0 227 140" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12C0 5.37258 5.37258 0 12 0H75.7239C76.5722 0 77.4219 0.086724 78.248 0.279558C88.1796 2.59773 92.6243 5.99712 97.2906 13.7954C97.7696 14.5959 98.3189 15.3614 98.9714 16.028C106.649 23.8724 114.076 26.663 135 26.0394H215C221.627 26.0394 227 31.412 227 38.0394V128C227 134.627 221.627 140 215 140H12C5.37258 140 0 134.627 0 128V12Z" fill="%230857CD"/></svg>') no-repeat;
+}
+
+.assessment__text {
+    max-width: 167px;
+    margin: 0 auto;
+}
+
+.span-accent {
+    font-weight: 500;
+}
+
+.back {
+    display: flex;
+    max-width: 161px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(243, 243, 243, 1);
+    background: url('data:image/svg+xml,<svg width="161" height="48" viewBox="0 0 161 48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="161" height="48" rx="10" fill="%23243665"/></svg>') no-repeat;
+    background-size: cover;
+    font-size: 16px;
+}
+
+.additional-description {
+    margin: 50px 0;
+    border-left: 1px solid rgba(8, 87, 205, 1);
+}
+
+.additional-description__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding: 64px 0 0 60px;
+}
+
+.additional-description__list-item {
+    margin-bottom: 40px;
+}
+
+.additional-description__list-item:last-of-type {
+    margin: 0;
+}
+
+.additional-description__title {
+    margin-bottom: 10px;
+}
+
+.additional-description__text {
+    margin: 0;
+}
+
+.authors {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.authors-item {
+    margin-bottom: 10px;
+}
+
+.authors-item:last-of-type {
+    margin: 0;
+}
