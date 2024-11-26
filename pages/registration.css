@@ -165,7 +165,7 @@
 }
 
 .authorization {
-    width: 550px;
+    width: 594px;
     align-self: center;
     margin: 0 auto;
     color: rgba(8, 87, 205, 1);
@@ -191,12 +191,17 @@
     border: none;
 }
 
+.form__group-container {
+    display: grid;
+    grid-template-columns: minmax(min-content, 304px) minmax(min-content, 260px);
+    column-gap: 30px;
+}
+
 .form__group {
     display: flex;
     flex-direction: column;
-    row-gap: 48px;
-    margin-bottom: 40px;
-    border-bottom: 2px solid rgba(8, 87, 205, 1)
+    row-gap: 3px;
+    margin-bottom: 30px;
 }
 
 .form__group-label {
@@ -212,7 +217,9 @@
 
 .form__item {
     margin: 0;
-    border: none;
+    padding: 21px 19px;
+    border: 3px solid rgba(8, 87, 205, 1);
+    border-radius: 10px;
 }
 
 .form__item_el_email {
@@ -233,14 +240,14 @@
 
 .form__submit-button {
     margin: 0;
-    padding: 16px 54px;
+    padding: 16px 30px;
     border-radius: 10px;
     border: none;
     font-weight: 500;
     font-size: 16px;
     line-height: 1;
     color: rgba(243, 243, 243, 1);
-    background-color: rgba(8, 87, 205, 1);
+    background-color: rgba(36, 54, 101, 1);
 }
 
 .form__link {
