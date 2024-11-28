@@ -1,0 +1,16 @@
+.sidebar__links-item {
+    text-decoration: none;
+    color: rgba(253, 252, 250, 1);
+    width: 233px;
+    height: 60px;
+    display: flex;
+    align-items: center ;
+    background-color: rgba(8, 87, 205, 1);
+    box-sizing: border-box;
+    padding-left: 40px;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar__links-item:hover {
+    border-left: 9px solid rgba(255, 129, 45, 1);
+}

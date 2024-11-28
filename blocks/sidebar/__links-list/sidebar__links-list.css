@@ -1,0 +1,12 @@
+.sidebar__links-list {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar__list-item-container:hover .sidebar__links-list {
+    display: block;
+}

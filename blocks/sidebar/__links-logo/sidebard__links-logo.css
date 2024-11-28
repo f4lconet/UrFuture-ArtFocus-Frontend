@@ -1,0 +1,12 @@
+.sidebard__links-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: rgba(253, 252, 250, 1);
+    padding: 15px 0;
+    box-sizing: border-box;
+}
+
+.sidebard__links-logo:hover {
+    
+}
