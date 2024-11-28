@@ -13,7 +13,6 @@
 }
 
 .content {
-    min-height: calc(100vh - 44px);
     padding: 22px 20px;
     display: flex;
     margin: auto;
@@ -27,16 +26,14 @@
     color: rgba(242, 242, 242, 1);
     border-radius: 40px;
     background-image: url("../images/authorization/background.jpg");
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background-size: cover;
     box-sizing: border-box;
 }
 
 .logo {
     max-width: min-content;
     max-height: min-content;
+    margin-bottom: 280px;
 }
 
 .logo__link {
@@ -248,6 +245,7 @@
     line-height: 1;
     color: rgba(243, 243, 243, 1);
     background-color: rgba(36, 54, 101, 1);
+    cursor: pointer;
 }
 
 .form__link {
@@ -258,21 +256,4 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
-    
-}
-
-.footer {
-
-}
-
-@media screen and (min-width: 2040px) {
-    .content {
-        min-height: 970px;
-    }
-}
-
-@media screen and (min-height: 1081px) {
-    .content {
-        min-height: 970px;
-    }
 }
