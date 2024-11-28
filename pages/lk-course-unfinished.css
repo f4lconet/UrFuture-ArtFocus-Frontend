@@ -18,11 +18,8 @@
 
 .pages {
     max-width: 1920px;
-    height: 100vh;
     margin: auto;
     font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
-    font-size: 20px;
-    color: rgba(0, 0, 0, 1);
     display: flex;
 }
 
@@ -35,8 +32,8 @@
 }
 
 .content {
-    width: 100%;
     margin-left: 70px;
+    font-size: 20px;
 }
 
 .content__container {
