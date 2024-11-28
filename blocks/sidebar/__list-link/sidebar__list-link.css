@@ -9,9 +9,7 @@
 }
 
 .sidebar__list-link:hover {
-    position: relative;
     width: 303px;
-    z-index: 10;
     background-color: rgba(255, 129, 45, 1);
     display: flex;
     gap: 20px;
