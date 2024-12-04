@@ -210,6 +210,14 @@
 .form__item {
     margin: 0;
     border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.form__item:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
 }
 
 .form__item_el_email {

@@ -99,6 +99,11 @@
     line-height: 29px;
 }
 
+.form__item:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
 .form__item_el_mail {
 
 }
