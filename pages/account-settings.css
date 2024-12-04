@@ -94,6 +94,9 @@
     box-sizing: border-box;
     border: 3px solid rgba(8, 87, 205, 1);
     border-radius: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
 }
 
 .form__item_el_mail {
