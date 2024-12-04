@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карточка курса</title>
-    <link rel="stylesheet" href="./pages/lk-course-unfinished.css">
+    <title>Аккаунт</title>
+    <link rel="stylesheet" href="./pages/account-settings.css">
 </head>
 <body class="pages">
     <aside class="sidebar">
@@ -92,83 +92,76 @@
             </div>
         </nav>
     </aside>
-    
+
     <main class="content">
-        <div class="content__container">
-            <div class="main-description">
-                <h1 class="main-description__title">МУП ДМиМЛ_09 Дискретная математика и математическая логика</h1>
-                <section class="annotation">
-                    <h2 class="annotation__title title">Аннотация</h2>
-                    <p class="annotation__text">
-                        Дискретная математика - одна из важнейших составляющих современной математики. С одной стороны, она включает фундаментальные основы математики - теорию множеств, математическую логику, теорию алгоритмов; с другой стороны, является основным математическим аппаратом информатики и вычислительной техники и потому служит базой для многочисленных приложений в экономике, технике, социальной сфере.
-                    </p>
-                </section>
+        <h1 class="content__title">Аккаунт</h1>
+        <section class="about">
+            <form action="" method="" class="form">
+                <h2 class="form__title">О себе</h2>
+                <p class="form__subtitle">Проверьте корректность данных. Если обнаружили ошибку, сообщите в техническую поддержку.</p>
+                <fieldset class="form__input-container">
+                    <div class="form__group">
+                        <label for="last-name" class="form__group-label">Фамилия</label>
+                        <input type="text" class="form__item" name="last-name" id="last-name" required placeholder="Введите фамилию">
+                    </div>
 
-                <section class="education">
-                    <h2 class="education__title title">Образовательный результат</h2>
-                    <p class="education__text">
-                        ОПК-2 - Способен формализовывать и решать задачи, относящиеся к профессиональной деятельности, используя методы моделирования и математического анализа<br>
-                        З-1 - Привести примеры использования методов моделирования и математического анализа в решении задач, относящихся к профессиональной деятельности<br>
-                        У-1 - Обоснованно выбрать возможные методы моделирования и математического анализа для предложенных задач профессиональной деятельности<br>
-                        П-1 - Решать поставленные задачи, относящиеся к области профессиональной деятельности, используя освоенные за время обучения пакеты прикладных программ для моделирования и математического анализа<br>
-                        Д-1 - Способность к самообразованию, к самостоятельному освоению новых методов математического анализа и моделирования
-                    </p>
-                </section>
+                    <div class="form__group">
+                        <label for="first-name" class="form__group-label">Имя</label>
+                        <input type="text" class="form__item" name="first-name" id="first-name" required placeholder="Введите имя">
+                    </div>
 
-                <section class="assessment">
-                    <ul class="assessment__list">
-                        <li class="assessment__list-item">
-                            <p class="assessment__text">
-                                <span class="span-accent">Бальная</span> шкала оценивания
-                            </p>
-                        </li>
-                        <li class="assessment__list-item">
-                            <p class="assessment__text">
-                                Максимальное количество баллов - <span class="span-accent">100</span>
-                            </p>
-                        </li>
-                        <li class="assessment__list-item">
-                            <p class="assessment__text">
-                                Количество предметов контроля - <span class="span-accent">33</span>
-                            </p>
-                        </li>
-                        <li class="assessment__list-item">
-                            <p class="assessment__text">
-                                Итоговый проект - <span class="span-accent">эссе</span>
-                            </p>
-                        </li>
-                    </ul>
-                </section>
+                    <div class="form__group">
+                        <label for="father-name" class="form__group-label">Отчество</label>
+                        <input type="text" class="form__item" name="father-name" id="father-name" placeholder="Введите отчество">
+                    </div>
 
-                <a href="completed-courses.html" class="back">Назад</a>
-            </div>
-            
-            <section class="additional-description">
-                <ul class="additional-description__list">
-                    <li class="additional-description__list-item">
-                        <h2 class="additional-description__title title">Код:</h2>
-                        <p class="additional-description__text">ДМиМЛ_09</p>
-                    </li>
-                    <li class="additional-description__list-item">
-                        <h2 class="additional-description__title title">Ак. часы:</h2>
-                        <p class="additional-description__text">66</p>
-                    </li>
-                    <li class="additional-description__list-item">
-                        <h2 class="additional-description__title title">Авторы:</h2>
-                        <ul class="authors">
-                            <li class="additional-description__text authors-item">Расин Олег Вениаминович</li>
-                            <li class="additional-description__text authors-item">Ермакова Галина Михайловна</li>
-                            <li class="additional-description__text authors-item">Белоусова Вероника Игоревна</li>
-                            <li class="additional-description__text authors-item">Белоусов Иван Николаевич</li>
-                        </ul>
-                    </li>
-                    <li class="additional-description__list-item">
-                        <h2 class="additional-description__title title">Макс. кол-во обучающихся:</h2>
-                        <p class="additional-description__text">140</p>
-                    </li>
-                </ul>
-            </section>
-        </div>
+                    <div class="form__group">
+                        <label for="study-group" class="form__group-label">Академическая группа</label>
+                        <input type="text" class="form__item" name="study-group" id="study-group" placeholder="Введите академическую группу">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="mail" class="form__group-label">Email с доменом urfu.me</label>
+                        <input type="email" class="form__item form__item_el_mail" name="mail" id="mail" required placeholder="Введите email с доменом urfu.me">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="reserve-mail" class="form__group-label">Резервный email</label>
+                        <input type="email" class="form__item form__item_el_reserve-mail" name="reserve-mail" id="reserve-mail" placeholder="Введите резервный email">
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__handlers">
+                    <button type="submit" class="form__submit-button">Сохранить</button>
+                </fieldset>
+            </form>
+        </section>
+ 
+        <section class="change-password">
+            <form action="" method="" class="form">
+                <h2 class="form__title">Изменение пароля</h2>
+                <fieldset class="form__input-container">
+                    <div class="form__group">
+                        <label for="current-password" class="form__group-label">Текущий пароль</label>
+                        <input type="email" class="form__item" name="current-password" id="current-password" placeholder="Введите текущий пароль" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="new-password" class="form__group-label">Новый пароль</label>
+                        <input type="email" class="form__item" name="new-password" id="new-password" placeholder="Введите новый пароль" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="return-new-password" class="form__group-label">Повторите новый пароль</label>
+                        <input type="email" class="form__item" name="return-new-password" id="return-new-password" placeholder="Повторно введите новый пароль" required>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form__handlers">
+                    <button type="submit" class="form__submit-button">Сохранить</button>
+                </fieldset>
+            </form>
+        </section>
     </main>
 </body>
 </html>

@@ -1,0 +1,131 @@
+@import url('../vendor/normalize.css');
+
+@import url('../vendor/fonts.css');
+
+@import url('../blocks/sidebar/sidebar.css');
+@import url('../blocks/sidebar/__nav/sidebar__nav.css');
+@import url('../blocks/sidebar/__nav-list/sidebar__nav-list.css');
+@import url('../blocks/sidebar/__nav-list-item/sidebar__nav-list-item.css');
+@import url('../blocks/sidebar/__list-text/sidebar__list-text.css');
+@import url('../blocks/sidebar/__list-link/sidebar__list-link.css');
+@import url('../blocks/sidebar/__user/sidebar__user.css');
+@import url('../blocks/sidebar/__user-link/sidebar__user-link.css');
+@import url('../blocks/sidebar/__user-text/sidebar__user-text.css');
+@import url('../blocks/sidebar/__list-item-container/sidebar__list-item-container.css');
+@import url('../blocks/sidebar/__links-list/sidebar__links-list.css');
+@import url('../blocks/sidebar/__links-item/sidebar__links-item.css');
+@import url('../blocks/sidebar/__links-logo/sidebard__links-logo.css');
+
+.pages {
+    max-width: 1920px;
+    min-height: 100vh;
+    margin: auto;
+    font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    margin-left: 70px;
+    padding: 60px 220px;
+    box-sizing: border-box;
+    background-color: rgba(243, 243, 243, 1);
+}
+
+.content__title {
+    margin: 0 0 60px;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 43px;
+    color: rgba(8, 87, 205, 1);
+}
+
+.about {
+
+}
+
+.form {
+    max-width: 619px;
+    margin-bottom: 60px;
+}
+
+.form__title {
+    margin: 0 0 28px;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 43px;
+    color: rgba(8, 87, 205, 1);
+}
+
+.form__subtitle {
+    margin: 0 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.form__input-container {
+    margin: 0 0 32px;
+    padding: 0;
+    border: none;
+    max-width: 568px;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 16px;
+}
+
+.form__group:last-of-type {
+    margin: 0;
+}
+
+.form__group-label {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(8, 87, 205, 1);
+
+}
+
+.form__item {
+    padding: 13px 25px;
+    box-sizing: border-box;
+    border: 3px solid rgba(8, 87, 205, 1);
+    border-radius: 10px;
+}
+
+.form__item_el_mail {
+
+}
+
+.form__item_el_reserve-mail {
+
+}
+
+.form__handlers {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.form__submit-button {
+    margin: 0;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: rgba(36, 54, 101, 1);
+    border: none;
+    color: rgba(243, 243, 243, 1);
+}
+
+.form__submit-button:last-of-type {
+    margin-bottom: 60px;
+}
+
+.change-password {
+
+}
+
+
