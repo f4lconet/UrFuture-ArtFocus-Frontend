@@ -1,0 +1,115 @@
+@import url('../vendor/normalize.css');
+
+@import url('../vendor/fonts.css');
+
+@import url('../blocks/sidebar/sidebar.css');
+@import url('../blocks/sidebar/__nav/sidebar__nav.css');
+@import url('../blocks/sidebar/__nav-list/sidebar__nav-list.css');
+@import url('../blocks/sidebar/__nav-list-item/sidebar__nav-list-item.css');
+@import url('../blocks/sidebar/__list-text/sidebar__list-text.css');
+@import url('../blocks/sidebar/__list-link/sidebar__list-link.css');
+@import url('../blocks/sidebar/__user/sidebar__user.css');
+@import url('../blocks/sidebar/__user-link/sidebar__user-link.css');
+@import url('../blocks/sidebar/__user-text/sidebar__user-text.css');
+@import url('../blocks/sidebar/__list-item-container/sidebar__list-item-container.css');
+@import url('../blocks/sidebar/__links-list/sidebar__links-list.css');
+@import url('../blocks/sidebar/__links-item/sidebar__links-item.css');
+@import url('../blocks/sidebar/__links-logo/sidebard__links-logo.css');
+
+.pages {
+    max-width: 1920px;
+    margin: auto;
+    font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+    display: flex;
+}
+
+.content {
+    width: 100%;
+    margin-left: 70px;
+    min-height: 100vh;
+    background-color: rgba(243, 243, 243, 1);
+    padding: 45px 166px;
+    box-sizing: border-box;
+}
+
+.content__title {
+    max-width: 578px;
+    margin: 0 0 53px;
+    padding: 15px 25px;
+    background-color: rgba(253, 252, 250, 1);
+    border-radius: 16px;
+    box-shadow: 0px 3px 26.9px 0px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+    font-size: 35px;
+    color: rgba(8, 87, 205, 1);
+    box-sizing: border-box;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 330px);
+    gap: 60px;
+}
+
+.card {
+    width: 330px;
+    border: 1px solid rgba(36, 54, 101, 1);
+    border-radius: 14px;
+}
+
+.card__title-container {
+    padding: 114px 53px;
+    box-sizing: border-box;
+    background-image: url('../images/recommended-jobs/background.png');
+    background-color: rgba(253, 252, 250, 1);
+    background-size: cover;
+    border-bottom: 1px solid rgba(36, 54, 101, 1);
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.card__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: rgba(8, 87, 205, 1);
+}
+
+.card__container {
+    padding: 40px 58px 30px;
+    box-sizing: border-box;
+    background-color: rgba(253, 252, 250, 1);
+    border-radius: inherit;
+}
+
+.card__button {
+    padding: 14px 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: rgba(36, 54, 101, 1);
+    color: rgba(243, 243, 243, 1);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    margin: 0 26px 27px;
+    cursor: pointer;
+}
+
+.card__text-container {
+    display: flex;
+    gap: 31px;
+}
+
+.card__text {
+    margin: 0;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: rgba(8, 87, 205, 1);
+}
+
+.card__text_type_date {
+    color: rgba(36, 54, 101, 1);
+}
