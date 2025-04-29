@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моё направление</title>
-    <link rel="icon" href="./images/favicon.svg">
-    <link rel="stylesheet" href="./pages/account-direction.css">
+    <title>Карточка курса</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/lk-course-unfinished.css">
 </head>
 <body class="pages">
     <aside class="sidebar">
@@ -93,110 +93,81 @@
             </div>
         </nav>
     </aside>
-
+    
     <main class="content">
         <div class="content__container">
-            <h1 class="content__title">Моё направление</h1>
-            <section class="user">
-                <svg width="170" height="170" viewBox="0 0 170 170" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_445_131)">
-                    <path d="M85 85C93.4057 85 101.623 82.5074 108.612 77.8375C115.601 73.1675 121.048 66.5299 124.265 58.7641C127.482 50.9982 128.323 42.4529 126.683 34.2087C125.044 25.9645 120.996 18.3917 115.052 12.448C109.108 6.50425 101.536 2.45652 93.2913 0.816645C85.0471 -0.823227 76.5018 0.0184147 68.736 3.23514C60.9701 6.45186 54.3325 11.8992 49.6625 18.8883C44.9926 25.8774 42.5 34.0943 42.5 42.5C42.5113 53.7683 46.9925 64.5718 54.9604 72.5396C62.9282 80.5075 73.7318 84.9888 85 85ZM85 14.1667C90.6038 14.1667 96.0818 15.8284 100.741 18.9417C105.401 22.055 109.032 26.4801 111.177 31.6573C113.321 36.8346 113.882 42.5315 112.789 48.0276C111.696 53.5237 108.997 58.5722 105.035 62.5347C101.072 66.4972 96.0237 69.1957 90.5276 70.2889C85.0314 71.3822 79.3345 70.8211 74.1573 68.6766C68.9801 66.5321 64.555 62.9006 61.4417 58.2412C58.3284 53.5818 56.6667 48.1038 56.6667 42.5C56.6667 34.9856 59.6518 27.7789 64.9653 22.4653C70.2788 17.1518 77.4855 14.1667 85 14.1667Z" fill="#0857CD"/>
-                    <path d="M85 99C68.0982 99.0187 51.894 105.741 39.9426 117.693C27.9913 129.644 21.2687 145.848 21.25 162.75C21.25 164.629 21.9963 166.43 23.3247 167.759C24.653 169.087 26.4547 169.833 28.3333 169.833C30.212 169.833 32.0136 169.087 33.342 167.759C34.6704 166.43 35.4167 164.629 35.4167 162.75C35.4167 149.6 40.6406 136.988 49.9393 127.689C59.238 118.391 71.8497 113.167 85 113.167C98.1503 113.167 110.762 118.391 120.061 127.689C129.359 136.988 134.583 149.6 134.583 162.75C134.583 164.629 135.33 166.43 136.658 167.759C137.986 169.087 139.788 169.833 141.667 169.833C143.545 169.833 145.347 169.087 146.675 167.759C148.004 166.43 148.75 164.629 148.75 162.75C148.731 145.848 142.009 129.644 130.057 117.693C118.106 105.741 101.902 99.0187 85 99Z" fill="#0857CD"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_445_131">
-                    <rect width="170" height="170" fill="white"/>
-                    </clipPath>
-                    </defs>
-                </svg>
-                <div class="user__data-container">
-                    <h2 class="user__name">Иванов Иван Иванович</h2>
-                    <ul class="user__data-items">
-                        <li class="user__data-item">№ студенческого билета:</li>
-                        <li class="user__data-item">00000000</li>
-                        <li class="user__data-item">Группа:</li>
-                        <li class="user__data-item">РИ-000000</li>
-                        <li class="user__data-item">Электронная почта:</li>
-                        <li class="user__data-item">IvanovIvanIvanovich@urfu.me</li>
-                        <li class="user__data-item">Моё направление:</li>
-                        <li class="user__data-item">Программная инженерия</li>
+            <div class="main-description">
+                <h1 class="main-description__title">МУП ДМиМЛ_09 Дискретная математика и математическая логика</h1>
+                <section class="annotation">
+                    <h2 class="annotation__title title">Аннотация</h2>
+                    <p class="annotation__text">
+                        Дискретная математика - одна из важнейших составляющих современной математики. С одной стороны, она включает фундаментальные основы математики - теорию множеств, математическую логику, теорию алгоритмов; с другой стороны, является основным математическим аппаратом информатики и вычислительной техники и потому служит базой для многочисленных приложений в экономике, технике, социальной сфере.
+                    </p>
+                </section>
+
+                <section class="education">
+                    <h2 class="education__title title">Образовательный результат</h2>
+                    <p class="education__text">
+                        ОПК-2 - Способен формализовывать и решать задачи, относящиеся к профессиональной деятельности, используя методы моделирования и математического анализа<br>
+                        З-1 - Привести примеры использования методов моделирования и математического анализа в решении задач, относящихся к профессиональной деятельности<br>
+                        У-1 - Обоснованно выбрать возможные методы моделирования и математического анализа для предложенных задач профессиональной деятельности<br>
+                        П-1 - Решать поставленные задачи, относящиеся к области профессиональной деятельности, используя освоенные за время обучения пакеты прикладных программ для моделирования и математического анализа<br>
+                        Д-1 - Способность к самообразованию, к самостоятельному освоению новых методов математического анализа и моделирования
+                    </p>
+                </section>
+
+                <section class="assessment">
+                    <ul class="assessment__list">
+                        <li class="assessment__list-item">
+                            <p class="assessment__text">
+                                <span class="span-accent">Бальная</span> шкала оценивания
+                            </p>
+                        </li>
+                        <li class="assessment__list-item">
+                            <p class="assessment__text">
+                                Максимальное количество баллов - <span class="span-accent">100</span>
+                            </p>
+                        </li>
+                        <li class="assessment__list-item">
+                            <p class="assessment__text">
+                                Количество предметов контроля - <span class="span-accent">33</span>
+                            </p>
+                        </li>
+                        <li class="assessment__list-item">
+                            <p class="assessment__text">
+                                Итоговый проект - <span class="span-accent">эссе</span>
+                            </p>
+                        </li>
                     </ul>
-                </div>
-            </section>
-            <section class="contacts">
-                <ul class="contacts__cards">
-                    <li class="contacts__card">
-                        <img src="<%=require('./images/account-direction/obabkov.jpg')%>" class="contacts__icon" alt="Иконка карточки">
-                        <div class="contacts__card-container">
-                            <h3 class="contact__title">Обабков Илья Николаевич</h3>
-                            <p class="contact__subtitle">Руководитель образовательной программы</p>
-                            <ul class="contacts__data-items">
-                                <li class="contacts__data-item">Адрес:</li>
-                                <li class="contacts__data-item">ул., Мира, 32</li>
-                                <li class="contacts__data-item">Аудитория:</li>
-                                <li class="contacts__data-item">Р-332</li>
-                                <li class="contacts__data-item">Телефон:</li>
-                                <li class="contacts__data-item"><a href="tel: (343) 375-97-00" class="contacts__data-tel">(343) 375-97-00</a></li>
-                                <li class="contacts__data-item">Email:</li>
-                                <li class="contacts__data-item"><a href="mailto: i.n.obabkov@urfu.ru" class="contacts__data-link">i.n.obabkov@urfu.ru</a></li>
-                            </ul>
-                        </div>
+                </section>
+
+                <a href="completed-courses.html" class="back">Назад</a>
+            </div>
+            
+            <section class="additional-description">
+                <ul class="additional-description__list">
+                    <li class="additional-description__list-item">
+                        <h2 class="additional-description__title title">Код:</h2>
+                        <p class="additional-description__text">ДМиМЛ_09</p>
                     </li>
-    
-                    <li class="contacts__card">
-                        <img src="./images/account-direction/obabkov.jpg" class="contacts__icon" alt="Иконка карточки">
-                        <div class="contacts__card-container">
-                            <h3 class="contact__title">Обабков Илья Николаевич</h3>
-                            <p class="contact__subtitle">Руководитель образовательной программы</p>
-                            <ul class="contacts__data-items">
-                                <li class="contacts__data-item">Адрес:</li>
-                                <li class="contacts__data-item">ул., Мира, 32</li>
-                                <li class="contacts__data-item">Аудитория:</li>
-                                <li class="contacts__data-item">Р-332</li>
-                                <li class="contacts__data-item">Телефон:</li>
-                                <li class="contacts__data-item"><a href="tel: (343) 375-97-00" class="contacts__data-tel">(343) 375-97-00</a></li>
-                                <li class="contacts__data-item">Email:</li>
-                                <li class="contacts__data-item"><a href="mailto: i.n.obabkov@urfu.ru" class="contacts__data-link">i.n.obabkov@urfu.ru</a></li>
-                            </ul>
-                        </div>
+                    <li class="additional-description__list-item">
+                        <h2 class="additional-description__title title">Ак. часы:</h2>
+                        <p class="additional-description__text">66</p>
                     </li>
-    
-                    <li class="contacts__card">
-                        <img src="./images/account-direction/obabkov.jpg" class="contacts__icon" alt="Иконка карточки">
-                        <div class="contacts__card-container">
-                            <h3 class="contact__title">Обабков Илья Николаевич</h3>
-                            <p class="contact__subtitle">Руководитель образовательной программы</p>
-                            <ul class="contacts__data-items">
-                                <li class="contacts__data-item">Адрес:</li>
-                                <li class="contacts__data-item">ул., Мира, 32</li>
-                                <li class="contacts__data-item">Аудитория:</li>
-                                <li class="contacts__data-item">Р-332</li>
-                                <li class="contacts__data-item">Телефон:</li>
-                                <li class="contacts__data-item"><a href="tel: (343) 375-97-00" class="contacts__data-tel">(343) 375-97-00</a></li>
-                                <li class="contacts__data-item">Email:</li>
-                                <li class="contacts__data-item"><a href="mailto: i.n.obabkov@urfu.ru" class="contacts__data-link">i.n.obabkov@urfu.ru</a></li>
-                            </ul>
-                        </div>
+                    <li class="additional-description__list-item">
+                        <h2 class="additional-description__title title">Авторы:</h2>
+                        <ul class="authors">
+                            <li class="additional-description__text authors-item">Расин Олег Вениаминович</li>
+                            <li class="additional-description__text authors-item">Ермакова Галина Михайловна</li>
+                            <li class="additional-description__text authors-item">Белоусова Вероника Игоревна</li>
+                            <li class="additional-description__text authors-item">Белоусов Иван Николаевич</li>
+                        </ul>
                     </li>
-    
-                    <li class="contacts__card">
-                        <img src="./images/account-direction/obabkov.jpg" class="contacts__icon" alt="Иконка карточки">
-                        <div class="contacts__card-container">
-                            <h3 class="contact__title">Обабков Илья Николаевич</h3>
-                            <p class="contact__subtitle">Руководитель образовательной программы</p>
-                            <ul class="contacts__data-items">
-                                <li class="contacts__data-item">Адрес:</li>
-                                <li class="contacts__data-item">ул., Мира, 32</li>
-                                <li class="contacts__data-item">Аудитория:</li>
-                                <li class="contacts__data-item">Р-332</li>
-                                <li class="contacts__data-item">Телефон:</li>
-                                <li class="contacts__data-item"><a href="tel: (343) 375-97-00" class="contacts__data-tel">(343) 375-97-00</a></li>
-                                <li class="contacts__data-item">Email:</li>
-                                <li class="contacts__data-item"><a href="mailto: i.n.obabkov@urfu.ru" class="contacts__data-link">i.n.obabkov@urfu.ru</a></li>
-                            </ul>
-                        </div>
+                    <li class="additional-description__list-item">
+                        <h2 class="additional-description__title title">Макс. кол-во обучающихся:</h2>
+                        <p class="additional-description__text">140</p>
                     </li>
-                </ul>           
+                </ul>
             </section>
         </div>
     </main>

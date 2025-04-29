@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карточка курса</title>
-    <link rel="icon" href="./images/favicon.svg">
-    <link rel="stylesheet" href="./pages/lk-course-unfinished.css">
+    <title>Завершённые курсы</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/completed-courses.css">
 </head>
 <body class="pages">
     <aside class="sidebar">
@@ -93,83 +93,77 @@
             </div>
         </nav>
     </aside>
-    
+
     <main class="content">
-        <div class="content__container">
-            <div class="main-description">
-                <h1 class="main-description__title">МУП ДМиМЛ_09 Дискретная математика и математическая логика</h1>
-                <section class="annotation">
-                    <h2 class="annotation__title title">Аннотация</h2>
-                    <p class="annotation__text">
-                        Дискретная математика - одна из важнейших составляющих современной математики. С одной стороны, она включает фундаментальные основы математики - теорию множеств, математическую логику, теорию алгоритмов; с другой стороны, является основным математическим аппаратом информатики и вычислительной техники и потому служит базой для многочисленных приложений в экономике, технике, социальной сфере.
-                    </p>
-                </section>
-
-                <section class="education">
-                    <h2 class="education__title title">Образовательный результат</h2>
-                    <p class="education__text">
-                        ОПК-2 - Способен формализовывать и решать задачи, относящиеся к профессиональной деятельности, используя методы моделирования и математического анализа<br>
-                        З-1 - Привести примеры использования методов моделирования и математического анализа в решении задач, относящихся к профессиональной деятельности<br>
-                        У-1 - Обоснованно выбрать возможные методы моделирования и математического анализа для предложенных задач профессиональной деятельности<br>
-                        П-1 - Решать поставленные задачи, относящиеся к области профессиональной деятельности, используя освоенные за время обучения пакеты прикладных программ для моделирования и математического анализа<br>
-                        Д-1 - Способность к самообразованию, к самостоятельному освоению новых методов математического анализа и моделирования
-                    </p>
-                </section>
-
-                <section class="assessment">
-                    <ul class="assessment__list">
-                        <li class="assessment__list-item">
-                            <p class="assessment__text">
-                                <span class="span-accent">Бальная</span> шкала оценивания
-                            </p>
-                        </li>
-                        <li class="assessment__list-item">
-                            <p class="assessment__text">
-                                Максимальное количество баллов - <span class="span-accent">100</span>
-                            </p>
-                        </li>
-                        <li class="assessment__list-item">
-                            <p class="assessment__text">
-                                Количество предметов контроля - <span class="span-accent">33</span>
-                            </p>
-                        </li>
-                        <li class="assessment__list-item">
-                            <p class="assessment__text">
-                                Итоговый проект - <span class="span-accent">эссе</span>
-                            </p>
-                        </li>
-                    </ul>
-                </section>
-
-                <a href="completed-courses.html" class="back">Назад</a>
+        <section class="content__container">
+            <h1 class="content__title">Пройденные курсы</h1>
+            <div class="content__semesters">
+                <p class="content__semesters-text">Все семестры</p>
+                <button type="button" class="content__semesters-button">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.99997 7.50003C6.73736 7.50049 6.47725 7.44904 6.23459 7.34865C5.99192 7.24825 5.7715 7.10089 5.58597 6.91503L0.292969 1.62103L1.70697 0.207031L6.99997 5.50003L12.293 0.207031L13.707 1.62103L8.41397 6.91403C8.22852 7.10007 8.00813 7.24762 7.76547 7.34819C7.5228 7.44875 7.26265 7.50036 6.99997 7.50003Z" fill="black"/>
+                    </svg>
+                </button>
             </div>
-            
-            <section class="additional-description">
-                <ul class="additional-description__list">
-                    <li class="additional-description__list-item">
-                        <h2 class="additional-description__title title">Код:</h2>
-                        <p class="additional-description__text">ДМиМЛ_09</p>
+
+            <ul class="courses__cards">
+                <a class="course__link" href="lk-course-unfinished.html">
+                    <li class="course__card">
+                        <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                        <p class="course__card-text">Смешанный курс</p>
+                        <p class="course__card-text">УРФУ</p>
                     </li>
-                    <li class="additional-description__list-item">
-                        <h2 class="additional-description__title title">Ак. часы:</h2>
-                        <p class="additional-description__text">66</p>
-                    </li>
-                    <li class="additional-description__list-item">
-                        <h2 class="additional-description__title title">Авторы:</h2>
-                        <ul class="authors">
-                            <li class="additional-description__text authors-item">Расин Олег Вениаминович</li>
-                            <li class="additional-description__text authors-item">Ермакова Галина Михайловна</li>
-                            <li class="additional-description__text authors-item">Белоусова Вероника Игоревна</li>
-                            <li class="additional-description__text authors-item">Белоусов Иван Николаевич</li>
-                        </ul>
-                    </li>
-                    <li class="additional-description__list-item">
-                        <h2 class="additional-description__title title">Макс. кол-во обучающихся:</h2>
-                        <p class="additional-description__text">140</p>
-                    </li>
-                </ul>
-            </section>
-        </div>
+                </a>
+                
+                <li class="course__card">
+                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                    <p class="course__card-text">Смешанный курс</p>
+                    <p class="course__card-text">УРФУ</p>
+                </li>
+
+                <li class="course__card">
+                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                    <p class="course__card-text">Смешанный курс</p>
+                    <p class="course__card-text">УРФУ</p>
+                </li>
+
+                <li class="course__card">
+                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                    <p class="course__card-text">Смешанный курс</p>
+                    <p class="course__card-text">УРФУ</p>
+                </li>
+
+                <li class="course__card">
+                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                    <p class="course__card-text">Смешанный курс</p>
+                    <p class="course__card-text">УРФУ</p>
+                </li>
+
+                <li class="course__card">
+                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                    <p class="course__card-text">Смешанный курс</p>
+                    <p class="course__card-text">УРФУ</p>
+                </li>
+
+                <li class="course__card">
+                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                    <p class="course__card-text">Смешанный курс</p>
+                    <p class="course__card-text">УРФУ</p>
+                </li>
+
+                <li class="course__card">
+                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                    <p class="course__card-text">Смешанный курс</p>
+                    <p class="course__card-text">УРФУ</p>
+                </li>
+
+                <li class="course__card">
+                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
+                    <p class="course__card-text">Смешанный курс</p>
+                    <p class="course__card-text">УРФУ</p>
+                </li>
+            </ul>           
+        </section>
     </main>
 </body>
 </html>

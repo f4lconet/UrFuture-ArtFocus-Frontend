@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // подклю�
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: { main: './src/ts/index.js' },
     output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
@@ -45,8 +45,52 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
+    // страница index
     new HtmlWebpackPlugin({
-      template: './src/index.html' // путь к файлу index.html
+      template: './src/pages/index.html', // путь к файлу index.html
+      filename: 'index.html',
+      
     }),
-  ]
+    new HtmlWebpackPlugin({
+      template: './src/pages/account-direction.html',
+      filename: 'account-direction.html',
+      
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/account-settings.html',
+      filename: 'account-settings.html',
+      
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/authorization.html',
+      filename: 'authorization.html',
+      
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/completed-courses.html',
+      filename: 'completed-courses.html',
+      
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/jobs-library.html',
+      filename: 'jobs-library.html',
+      
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/lk-course-unfinished.html',
+      filename: 'lk-course-unfinished.html',
+      
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/recommended-jobs.html',
+      filename: 'recommended-jobs.html',
+      
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/registration.html',
+      filename: 'registration.html',
+      
+    }),
+  ],
+
 };

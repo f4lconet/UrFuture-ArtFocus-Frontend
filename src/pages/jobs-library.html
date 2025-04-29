@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Завершённые курсы</title>
-    <link rel="icon" href="./images/favicon.svg">
-    <link rel="stylesheet" href="./pages/completed-courses.css">
+    <title>Библиотека профессий</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/jobs-library.css">
 </head>
 <body class="pages">
     <aside class="sidebar">
@@ -95,74 +95,42 @@
     </aside>
 
     <main class="content">
-        <section class="content__container">
-            <h1 class="content__title">Пройденные курсы</h1>
-            <div class="content__semesters">
-                <p class="content__semesters-text">Все семестры</p>
-                <button type="button" class="content__semesters-button">
-                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.99997 7.50003C6.73736 7.50049 6.47725 7.44904 6.23459 7.34865C5.99192 7.24825 5.7715 7.10089 5.58597 6.91503L0.292969 1.62103L1.70697 0.207031L6.99997 5.50003L12.293 0.207031L13.707 1.62103L8.41397 6.91403C8.22852 7.10007 8.00813 7.24762 7.76547 7.34819C7.5228 7.44875 7.26265 7.50036 6.99997 7.50003Z" fill="black"/>
-                    </svg>
-                </button>
+        <h1 class="content__title">Профессии</h1>
+        <div class="jobs-list">
+            <p class="jobs-list__heading">Веб-разработчик</p>
+            <button class="jobs-list__button">
+                <svg width="29" height="15" viewBox="0 0 29 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1.5" y1="-1.5" x2="17.2421" y2="-1.5" transform="matrix(0.754567 0.656223 -0.754567 0.656223 0 2.53906)" stroke="#0857CD" stroke-width="3" stroke-linecap="round"/>
+                    <line x1="1.5" y1="-1.5" x2="17.2421" y2="-1.5" transform="matrix(0.754567 -0.656223 0.754567 0.656223 14.667 14.2988)" stroke="#0857CD" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+        <section class="cards">
+            <div class="card">
+                <div class="card__title-container">
+                    <h2 class="card__title">Веб-разработчик</h2>
+                </div>
+                <div class="card__container">
+                    <button class="card__button">Посмотреть</button>
+                    <div class="card__text-container">
+                        <p class="card__text">Пройден:</p>
+                        <p class="card__text card__text_type_date">12.09.2022</p>
+                    </div>
+                </div>
             </div>
 
-            <ul class="courses__cards">
-                <a class="course__link" href="lk-course-unfinished.html">
-                    <li class="course__card">
-                        <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                        <p class="course__card-text">Смешанный курс</p>
-                        <p class="course__card-text">УРФУ</p>
-                    </li>
-                </a>
-                
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-
-                <li class="course__card">
-                    <h2 class="course__card-title">Веб-технологии и верстка</h2>
-                    <p class="course__card-text">Смешанный курс</p>
-                    <p class="course__card-text">УРФУ</p>
-                </li>
-            </ul>           
+            <div class="card">
+                <div class="card__title-container">
+                    <h2 class="card__title">Веб-разработчик</h2>
+                </div>
+                <div class="card__container">
+                    <button class="card__button">Посмотреть</button>
+                    <div class="card__text-container">
+                        <p class="card__text">Пройден:</p>
+                        <p class="card__text card__text_type_date">12.09.2022</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>

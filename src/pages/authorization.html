@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
-    <link rel="icon" href="./images/favicon.svg">
-    <link rel="stylesheet" href="./pages/registration.css">
+    <title>Авторизация</title>
+    <link rel="icon" href="../images/favicon.svg">
+    <link rel="stylesheet" href="../styles/authorization.css">
 </head>
 <body class="page"> 
     <main class="content">
@@ -62,46 +62,23 @@
 
         <section class="authorization">
             <form action="" method="" class="form">
-                <h2 class="form__title">Регистрация</h2>
+                <h2 class="form__title">Авторизация</h2>
                 <fieldset class="form__input-container">
-
-                    <div class="form__group-container">
-                        <div class="form__group">
-                            <label for="last-name" class="form__group-label">Фамилия</label>
-                            <input type="text" class="form__item" name="last-name" id="last-name" required placeholder="Введите фамилию">
-                        </div>
-    
-                        <div class="form__group">
-                            <label for="first-name" class="form__group-label">Имя</label>
-                            <input type="text" class="form__item" name="first-name" id="first-name" required placeholder="Введите имя">
-                        </div>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="father-name" class="form__group-label">Отчество</label>
-                        <input type="text" class="form__item" name="father-name" id="father-name" placeholder="Введите отчество">
-                    </div>
-
                     <div class="form__group">
                         <label for="mail" class="form__group-label">Email</label>
-                        <input type="email" class="form__item form__item_el_email" name="mail" id="mail" required placeholder="Введите email">
+                        <input type="email" class="form__item form__item_el_email" name="mail" id="mail" required placeholder="Введите email или номер телефона">
                     </div>
                     
                     <div class="form__group">
                         <label for="password" class="form__group-label">Пароль</label>
                         <input type="password" class="form__item form__item_el_password" name="password" id="password" required placeholder="Введите пароль">
                     </div>
-
-                    <div class="form__group">
-                        <label for="repeat-password" class="form__group-label">Повторите пароль</label>
-                        <input type="password" class="form__item" name="repeat-password" id="repeat-password" required placeholder="Введите пароль">
-                    </div>
                 </fieldset>
 
                 <fieldset class="form__handlers">
-                    <button type="submit" class="form__submit-button">Зарегистрироваться</button>
+                    <button type="submit" class="form__submit-button">Войти</button>
                 </fieldset>
-                <a href="./authorization.html" class="form__link">У вас есть учётная запись? Войти</a>
+                <a href="./registration.html" class="form__link">У вас нет учётной записи? Зарегистрироваться</a>
             </form>
         </section>
     </main>
