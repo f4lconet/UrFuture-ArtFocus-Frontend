@@ -4,10 +4,20 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // подклю�
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: { main: './src/ts/index.ts' },
+    entry: { 
+      main: './src/ts/index.ts',
+      accountDirection: './src/ts/account-direction.ts',
+      accountSettings: './src/ts/account-settings.ts',
+      authorization: './src/ts/authorization.ts',
+      completedCourses: './src/ts/completed-courses.ts',
+      jobsLibrary: './src/ts/jobs-library.ts',
+      lkCourseUnfinished: './src/ts/lk-course-unfinished.ts',
+      recommendedJobs: './src/ts/recommended-jobs.ts',
+      registration: './src/ts/registration.ts'
+    },
     output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: '[name].js',
         publicPath: ''
   },
     mode: 'development',
@@ -49,47 +59,47 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/index.html', // путь к файлу index.html
       filename: 'index.html',
-      
+      chunks: ['main']
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/account-direction.html',
       filename: 'account-direction.html',
-      
+      chunks: ['accountDirection']
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/account-settings.html',
       filename: 'account-settings.html',
-      
+      chunks: ['accountSettings']
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/authorization.html',
       filename: 'authorization.html',
-      
+      chunks: ['authorization']
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/completed-courses.html',
       filename: 'completed-courses.html',
-      
+      chunks: ['completedCourses']
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/jobs-library.html',
       filename: 'jobs-library.html',
-      
+      chunks: ['jobsLibrary']
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/lk-course-unfinished.html',
       filename: 'lk-course-unfinished.html',
-      
+      chunks: ['lkCourseUnfinished']
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/recommended-jobs.html',
       filename: 'recommended-jobs.html',
-      
+      chunks: ['recommendedJobs']
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/registration.html',
       filename: 'registration.html',
-      
+      chunks: ['registration']
     }),
   ],
 
