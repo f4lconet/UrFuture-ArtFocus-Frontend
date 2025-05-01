@@ -5,15 +5,15 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: { 
-      main: './src/ts/index.ts',
-      accountDirection: './src/ts/account-direction.ts',
-      accountSettings: './src/ts/account-settings.ts',
-      authorization: './src/ts/authorization.ts',
-      completedCourses: './src/ts/completed-courses.ts',
-      jobsLibrary: './src/ts/jobs-library.ts',
-      lkCourseUnfinished: './src/ts/lk-course-unfinished.ts',
-      recommendedJobs: './src/ts/recommended-jobs.ts',
-      registration: './src/ts/registration.ts'
+      main: './src/components/index/index.ts',
+      accountDirection: './src/components/account-direction/account-direction.ts',
+      accountSettings: './src/components/account-settings/account-settings.ts',
+      authorization: './src/components/authorization/authorization.ts',
+      completedCourses: './src/components/completed-courses/completed-courses.ts',
+      jobsLibrary: './src/components/jobs-library/jobs-library.ts',
+      lkCourseUnfinished: './src/components/lk-course-unfinished/lk-course-unfinished.ts',
+      recommendedJobs: './src/components/recommended-jobs/recommended-jobs.ts',
+      registration: './src/components/registration/registration.ts'
     },
     output: {
     path: path.resolve(__dirname, 'dist'),
