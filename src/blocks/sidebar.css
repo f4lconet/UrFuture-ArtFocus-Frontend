@@ -113,6 +113,32 @@
     padding: 0;
 }
 
+.sidebar__user {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logout-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    margin-bottom: 22px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(206, 4, 4, 1);
+    border-radius: 12px;
+}
+
+#logout-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
 .sidebar__user-link {
     width: 70px;
     height: 70px;
@@ -123,6 +149,7 @@
     background-color: rgba(8, 87, 205, 1);
     text-decoration: none;
     transition: width 0.2s ease-in-out;
+    align-self: start;
 }
 
 .sidebar__user-link:hover {
@@ -135,6 +162,7 @@
     justify-content: start;
     padding-left: 50px;
     box-sizing: border-box;
+    align-self: start;
 }
 
 .sidebar__user-link:hover .sidebar__user-text {
