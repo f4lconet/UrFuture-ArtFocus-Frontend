@@ -2,19 +2,7 @@
 
 @import url('../vendor/fonts.css');
 
-@import url('../blocks/sidebar/sidebar.css');
-@import url('../blocks/sidebar/__nav/sidebar__nav.css');
-@import url('../blocks/sidebar/__nav-list/sidebar__nav-list.css');
-@import url('../blocks/sidebar/__nav-list-item/sidebar__nav-list-item.css');
-@import url('../blocks/sidebar/__list-text/sidebar__list-text.css');
-@import url('../blocks/sidebar/__list-link/sidebar__list-link.css');
-@import url('../blocks/sidebar/__user/sidebar__user.css');
-@import url('../blocks/sidebar/__user-link/sidebar__user-link.css');
-@import url('../blocks/sidebar/__user-text/sidebar__user-text.css');
-@import url('../blocks/sidebar/__list-item-container/sidebar__list-item-container.css');
-@import url('../blocks/sidebar/__links-list/sidebar__links-list.css');
-@import url('../blocks/sidebar/__links-item/sidebar__links-item.css');
-@import url('../blocks/sidebar/__links-logo/sidebard__links-logo.css');
+@import url('../blocks/sidebar.css');
 
 .pages {
     max-width: 1920px;

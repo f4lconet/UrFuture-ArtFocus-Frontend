@@ -13,7 +13,7 @@ module.exports = {
       jobsLibrary: './src/components/jobs-library/jobs-library.ts',
       lkCourseUnfinished: './src/components/lk-course-unfinished/lk-course-unfinished.ts',
       recommendedJobs: './src/components/recommended-jobs/recommended-jobs.ts',
-      registration: './src/components/registration/registration.ts'
+      registration: './src/components/registration/registration.ts',
     },
     output: {
     path: path.resolve(__dirname, 'dist'),
@@ -36,6 +36,10 @@ module.exports = {
         exclude: '/node_modules/', // исключает папку node_modules, файлы в ней обрабатывать не нужно
       },
       {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
         test: /\.(png|svg|jpg|gif|woff(2)?|eot|ttf|otf)$/, // регулярное выражение, которое ищет все файлы с такими расширениями
         type: 'asset/resource'
       },
@@ -49,7 +53,7 @@ module.exports = {
           options: { importLoaders: 1 }
         },
       'postcss-loader']
-      }
+      },
       ]
   },
   plugins: [
@@ -64,7 +68,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/pages/account-direction.html',
       filename: 'account-direction.html',
-      chunks: ['accountDirection']
+      chunks: ['accountDirection'],
     }),
     new HtmlWebpackPlugin({
       template: './src/pages/account-settings.html',

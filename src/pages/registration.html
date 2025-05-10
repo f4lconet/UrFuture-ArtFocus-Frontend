@@ -59,8 +59,8 @@
             </div>
         </section>
 
-        <section class="authorization">
-            <form action="" method="" class="form">
+        <section class="registration">
+            <form action="/apply/" method="POST" class="form">
                 <h2 class="form__title">Регистрация</h2>
                 <fieldset class="form__input-container">
 
@@ -84,6 +84,11 @@
                     <div class="form__group">
                         <label for="mail" class="form__group-label">Email</label>
                         <input type="email" class="form__item form__item_el_email" name="mail" id="mail" required placeholder="Введите email">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="direction" class="form__group-label">Направление</label>
+                        <input type="text" class="form__item form__item_direction" name="direction" id="direction" required placeholder="Введите направление">
                     </div>
                     
                     <div class="form__group">
