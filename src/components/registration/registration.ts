@@ -1,115 +1,56 @@
 import '../../styles/registration.css';
+
 import { AuthService } from '../auth/auth.ts';
 
+// перенаправление на страницу "Мое направление", если пользователь авторизован
+document.addEventListener('DOMContentLoaded', () => {
+    const authService = AuthService.getInstance();
+    authService.redirectToAccDirection();
+});
 
-export interface IRegistrationData {
-    email: string;
-    first_name: string;
-    last_name: string;
-    patronymic: string;
-    direction: number;
-    password: string;
+const form = document.querySelector('.form') as HTMLFormElement;
+
+type TFormType = number | string ;
+
+const serializeForm = (formNode: HTMLFormElement) => {
+    const formData = new FormData(formNode);
+    const elements: Record<string, TFormType> = {};
+
+    elements['email'] = formData.get('mail') as string;
+    elements['first_name'] = formData.get('first-name') as string;
+    elements['last_name'] = formData.get('last-name') as string;
+    elements['patronymic'] = formData.get('father-name') as string;
+    elements['direction'] = Number(formData.get('direction'));
+    elements['password'] = formData.get('password') as string;
+
+    return elements;
 }
 
-export interface IApiResponse {
-    success: boolean;
-    message?: string;
-    tokens?: {
-        access: string;
-        refresh: string;
-    };
-    user?: {
-        id: string;
-        email: string;
-    };
+const handleFormSubmit = (event: SubmitEvent) => {
+    event.preventDefault();
+    const serializedForm = serializeForm(form);
+    sendData(serializedForm);
 }
 
-export interface IFormElements {
-    [key: string]: string | number;
+if (form) {
+    form.addEventListener('submit', handleFormSubmit);
 }
 
-// Класс для обработки регистрации
-class RegistrationForm {
-    private form: HTMLFormElement;
-    private authService: AuthService;
-
-    constructor(formElement: HTMLFormElement) {
-        this.form = formElement;
-        this.authService = AuthService.getInstance();
-        this.init();
-    }
-
-    private init(): void {
-        this.form.addEventListener('submit', this.handleSubmit.bind(this));
-    }
-
-    private serializeForm(): IRegistrationData {
-        const formData = new FormData(this.form);
-        
-        return {
-        email: formData.get('mail') as string,
-        first_name: formData.get('first-name') as string,
-        last_name: formData.get('last-name') as string,
-        patronymic: formData.get('father-name') as string,
-        direction: Number(formData.get('direction')),
-        password: formData.get('password') as string
-        };
-    }
-
-    private async handleSubmit(event: SubmitEvent): Promise<void> {
-        event.preventDefault();
-        const formData = this.serializeForm();
-
-        try {
-        const response = await this.sendRegistrationData(formData);
-        this.handleRegistrationResponse(response);
-        } catch (error) {
-        this.handleRegistrationError(error as Error);
-        }
-    }
-
-    private async sendRegistrationData(data: IRegistrationData): Promise<IApiResponse> {
-        const response = await fetch('http://127.0.0.1:8000/api/register/', {
+async function sendData(data: Record<string, TFormType>): Promise<void> {
+    const response = await fetch('http://127.0.0.1:8000/api/register/', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(data)
-        });
+    })
 
-        if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        return await response.json();
+    if (!response.ok) {
+        const error = new Error('Ошибка регистрации');
+        throw error;
     }
 
-    private handleRegistrationResponse(response: IApiResponse): void {
-        if (response.success && response.tokens) {
-            localStorage.setItem('access', response.tokens.access);
-            localStorage.setItem('refresh', response.tokens.refresh);
-            
-            // Перенаправляем пользователя
-            this.authService.redirectToAccDirection();
-        } else {
-            throw new Error(response.message || 'Registration failed');
-        }
-    }
+    window.alert('Регистрация произошла успешно!');
+    window.location.href = '/authorization.html';
 
-    private handleRegistrationError(error: Error): void {
-        console.error('Registration error:', error);
-        // Отображение ошибки пользователю
-        alert(`Ошибка регистрации: ${error.message}`);
-    }
 }
-
-// Инициализация при загрузке страницы
-document.addEventListener('DOMContentLoaded', () => {
-    const authService = AuthService.getInstance();
-    authService.redirectToAccDirection();
-
-    const form = document.querySelector('.form') as HTMLFormElement;
-    if (form) {
-        new RegistrationForm(form);
-    }
-});
