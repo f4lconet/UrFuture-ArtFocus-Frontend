@@ -1,193 +1,166 @@
 import '../../styles/authorization.css';
+import { AuthService } from '../auth/auth.ts';
 
-import { LoginFormData, AuthResponse, AuthPageElements } from '../../types/authorization';
+export interface IAuthResponse {
+  access_token: string;
+  refresh_token: string;
+}
 
-class AuthForm {
-  private elements: AuthPageElements;
+export interface IAuthFormData {
+  email: string;
+  password: string;
+}
 
-  constructor() {
-    this.elements = this.getPageElements();
-    this.initEventListeners();
-  }
+export interface IAuthError extends Error {
+  statusCode?: number;
+  responseData?: any;
+}
 
-  private getPageElements(): AuthPageElements {
-    return {
-      form: document.querySelector('.form') as HTMLFormElement,
-      emailInput: document.getElementById('mail') as HTMLInputElement,
-      passwordInput: document.getElementById('password') as HTMLInputElement,
-      submitButton: document.querySelector('.form__submit-button') as HTMLButtonElement,
-      errorContainer: document.querySelector('.form__error-container'),
-    };
-  }
+// Класс для обработки авторизации
+class AuthPage {
+    private form: HTMLFormElement;
+    private authService: AuthService;
 
-  private initEventListeners(): void {
-    this.elements.form.addEventListener('submit', (e) => this.handleSubmit(e));
-  }
-
-  private async handleSubmit(event: Event): Promise<void> {
-    event.preventDefault();
-    
-    const formData = this.getFormData();
-    const validationResult = this.validateForm(formData);
-    
-    if (!validationResult.isValid) {
-      this.showErrors(validationResult.errors);
-      return;
+    constructor(formElement: HTMLFormElement) {
+        this.form = formElement;
+        this.authService = AuthService.getInstance();
+        this.init();
     }
 
-    try {
-      this.elements.submitButton.disabled = true;
-      const response = await this.sendAuthRequest(formData);
-      this.handleAuthResponse(response);
-    } catch (error) {
-      this.handleError(error);
-    } finally {
-      this.elements.submitButton.disabled = false;
-    }
-  }
+    private validateForm(data: IAuthFormData): { isValid: boolean; errors: Record<string, string> } {
+        const errors: Record<string, string> = {};
 
-  private getFormData(): LoginFormData {
-    return {
-      email: this.elements.emailInput.value.trim(),
-      password: this.elements.passwordInput.value,
-    };
-  }
+        // Простая валидация email (только базовый формат)
+        if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+            errors.email = 'Введите корректный email';
+        }
 
-  private validateForm(data: LoginFormData): {
-    isValid: boolean;
-    errors: { field: keyof LoginFormData; message: string }[];
-  } {
-    const errors: { field: keyof LoginFormData; message: string }[] = [];
-    
-    if (!data.email) {
-      errors.push({ field: 'email', message: 'Email обязателен' });
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-      errors.push({ field: 'email', message: 'Введите корректный email' });
-    }
-    
-    if (!data.password) {
-      errors.push({ field: 'password', message: 'Пароль обязателен' });
-    } else if (data.password.length < 6) {
-      errors.push({ field: 'password', message: 'Пароль должен содержать минимум 6 символов' });
-    }
-    
-    return {
-      isValid: errors.length === 0,
-      errors,
-    };
-  }
+        // Валидация пароля (минимум 8 символов)
+        if (!data.password || data.password.length < 8) {
+            errors.password = 'Пароль должен содержать минимум 8 символов';
+        }
 
-  private async sendAuthRequest(data: LoginFormData): Promise<AuthResponse> {
-    const response = await fetch('https://your-api-url.com/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+        return {
+            isValid: Object.keys(errors).length === 0,
+            errors
+        };
     }
 
-    return response.json();
-  }
+    private displayErrors(errors: Record<string, string>): void {
+        // Сбрасываем все предыдущие ошибки
+        this.form.querySelectorAll('.error-message').forEach(el => {
+            (el as HTMLElement).textContent = '';
+        });
 
-  private showErrors(errors: { field: keyof LoginFormData; message: string }[]): void {
-    this.clearErrors();
-    
-    if (!this.elements.errorContainer) {
-      this.elements.errorContainer = document.createElement('div');
-      this.elements.errorContainer.className = 'form__error-container';
-      this.elements.form.insertBefore(
-        this.elements.errorContainer,
-        this.elements.form.querySelector('.form__handlers')
-      );
+        // Показываем новые ошибки
+        for (const [field, message] of Object.entries(errors)) {
+            const errorElement = this.form.querySelector(`.${field}-error`);
+            if (errorElement) {
+                errorElement.textContent = message;
+            }
+        }
     }
-    
-    errors.forEach((error) => {
-      const errorElement = document.createElement('p');
-      errorElement.className = 'form__error-message';
-      errorElement.textContent = error.message;
-      this.elements.errorContainer?.appendChild(errorElement);
-      
-      // Подсветка проблемного поля
-      const inputField = error.field === 'email' 
-        ? this.elements.emailInput 
-        : this.elements.passwordInput;
-      inputField.classList.add('form__item_error');
-    });
-  }
 
-  private clearErrors(): void {
-    if (this.elements.errorContainer) {
-      this.elements.errorContainer.innerHTML = '';
+    private init(): void {
+        this.form.addEventListener('submit', this.handleFormSubmit.bind(this));
     }
-    this.elements.emailInput.classList.remove('form__item_error');
-    this.elements.passwordInput.classList.remove('form__item_error');
-  }
 
-  private handleAuthResponse(response: AuthResponse): void {
-    if (response.success && response.token) {
-      // Сохраняем токен и данные пользователя
-      localStorage.setItem('authToken', response.token);
-      if (response.user) {
-        localStorage.setItem('userData', JSON.stringify(response.user));
-      }
-      
-      // Перенаправляем на защищенную страницу
-      window.location.href = '/profile.html';
-    } else {
-      this.showErrors(
-        response.errors || [{ field: 'email', message: response.message || 'Ошибка авторизации' }]
-      );
+    private serializeForm(): IAuthFormData {
+        const formData = new FormData(this.form);
+        
+        return {
+            email: formData.get('mail') as string,
+            password: formData.get('password') as string
+        };
     }
-  }
 
-  private handleError(error: unknown): void {
-    console.error('Auth error:', error);
-    this.showErrors([{
-      field: 'email',
-      message: error instanceof Error ? error.message : 'Произошла неизвестная ошибка'
-    }]);
-  }
+    private async handleFormSubmit(event: SubmitEvent): Promise<void> {
+        event.preventDefault();
+        const formData = this.serializeForm();
+        const validation = this.validateForm(formData);
+
+        if (!validation.isValid) {
+            this.displayErrors(validation.errors);
+            return;
+        }
+
+        try {
+            await this.authenticateUser(formData);
+            this.redirectToAccount();
+        } catch (error) {
+            this.handleAuthError(error as IAuthError);
+        }
+    }
+
+    private async authenticateUser(data: IAuthFormData): Promise<void> {
+        const response = await fetch('http://127.0.0.1:8000/api/login/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            const error: IAuthError = new Error('Ошибка авторизации');
+            error.statusCode = response.status;
+        try {
+            error.responseData = await response.json();
+        } catch (e) {
+            error.responseData = await response.text();
+        }
+        throw error;
+        }
+
+        const responseData: IAuthResponse = await response.json();
+        this.storeTokens(responseData);
+    }
+
+    private storeTokens(tokens: IAuthResponse): void {
+        localStorage.setItem('access', tokens.access_token);
+        localStorage.setItem('refresh', tokens.refresh_token);
+    }
+
+    private redirectToAccount(): void {
+        window.location.href = '/account-direction.html';
+    }
+
+    private handleAuthError(error: IAuthError): void {
+        console.error('Authentication error:', error);
+        
+        // отображение ошибки пользователю
+        const errorElement = document.getElementById('auth-error');
+        if (errorElement) {
+            errorElement.textContent = this.getErrorMessage(error);
+            errorElement.style.display = 'block';
+        }
+    }
+
+    private getErrorMessage(error: IAuthError): string {
+        if (error.responseData?.detail) {
+            return error.responseData.detail;
+        }
+        
+        switch (error.statusCode) {
+        case 401:
+            return 'Неверный email или пароль';
+        case 400:
+            return 'Некорректные данные';
+        case 500:
+            return 'Ошибка сервера';
+        default:
+            return 'Произошла ошибка при авторизации';
+        }
+    }
 }
 
 // Инициализация при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
-  new AuthForm();
+    const authService = AuthService.getInstance();
+    authService.redirectToAccDirection();
+    
+    const form = document.querySelector('.form') as HTMLFormElement;
+    if (form) {
+        new AuthPage(form);
+    }
 });
-
-
-
-export const authAPI = {
-  async login(data: LoginFormData): Promise<AuthResponse> {
-    const response = await fetch('https://your-api-url.com/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      throw new Error(`Login failed with status ${response.status}`);
-    }
-
-    return response.json();
-  },
-
-  async checkAuth(token: string): Promise<AuthResponse> {
-    const response = await fetch('https://your-api-url.com/auth/check', {
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    });
-
-    if (!response.ok) {
-      throw new Error(`Auth check failed with status ${response.status}`);
-    }
-
-    return response.json();
-  }
-};
